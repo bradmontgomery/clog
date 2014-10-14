@@ -6,10 +6,11 @@ setup(
     name='clog',
     version=clog.__version__,
     description='pretty-printed and colofor logging',
-    long_description=open(os.path.join('README')).read(),
+    long_description=open(os.path.join('README.rst')).read(),
     keywords='django, log, color',
     author='Brad Montgomery',
     author_email='brad@bradmontgomery.net',
+    url='https://github.com/bradmontgomery/clog',
     packages=find_packages(),
     classifiers=[
         'Framework :: Django',
