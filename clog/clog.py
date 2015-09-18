@@ -1,8 +1,18 @@
 from pprint import pformat
-from django.utils.termcolors import colorize
+from . import colors
+
+
+def colorize(color, text):
+    f = getattr(colors, color)
+    return f(text)
 
 
 def clog(msg, color="yellow", title=None):
     if title:
-        print(colorize("------- {0} ---------".format(title), fg=color))
-    print(colorize(pformat(msg), fg=color))
+        print(colorize(color, "------- {0} ---------".format(title)))
+    print(colorize(color, pformat(msg)))
+
+
+def test():
+    for c in ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']:
+        print(colorize(c, "Hello World!"))
