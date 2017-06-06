@@ -1,13 +1,15 @@
 clog
 ====
 
-pretty-printed, color, logging (printing, really) for django
+*Pretty-print things with color.*
+
+This utility allows you to wrap `pprint` with colors.
 
 
 usage
 -----
 
-Just pass any data into clog and it'll get pretty-printed.
+Pass any data into clog and it'll get pretty-printed.
 
     >>> from clog import clog
     >>> data = {'here': 'is some data'}
@@ -21,3 +23,14 @@ You can also give it a title:
 Or change the color:
 
     >>> clog(data, title="My Data", color="red")
+
+This library uses the ANSI color codes from [fabric](http://www.fabfile.org/),
+and it supports the following color strings:
+
+- blue
+- cyan
+- green
+- magenta
+- red
+- white
+- yellow
