@@ -6,7 +6,7 @@ setup(
     name='clog',
     version=clog.__version__,
     description='pretty-print with color',
-    long_description=open(os.path.join('README.rst')).read(),
+    long_description=open(os.path.join('README.md')).read(),
     keywords='debugging, log, color, pretty-print',
     author='Brad Montgomery',
     author_email='brad@bradmontgomery.net',
