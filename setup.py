@@ -1,28 +1,33 @@
-import os
-from setuptools import setup, find_packages
-import clog
+import setuptools
 
-setup(
-    name='clog',
-    version=clog.__version__,
-    description='pretty-print with color',
-    long_description=open(os.path.join('README.md')).read(),
-    keywords='debugging, log, color, pretty-print',
-    author='Brad Montgomery',
-    author_email='brad@bradmontgomery.net',
-    url='https://github.com/bradmontgomery/clog',
-    packages=find_packages(),
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="clog",
+    version="0.3.0",
+    author="Brad Montgomery",
+    author_email="brad@bradmontgomery.net",
+    description="pretty-print with color",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/bradmontgomery/clog",
+    project_urls={
+        "Bug Tracker": "https://github.com/bradmontgomery/clog/issues",
+    },
     classifiers=[
-        'Development Status :: 4 - Beta',
-        'Programming Language :: Python',
-        'Intended Audience :: Developers',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 3',
-        'Topic :: Software Development :: Libraries :: Python Modules',
+        "Development Status :: 4 - Beta",
+        "Programming Language :: Python",
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    license='MIT',
-    include_package_data=True,
-    zip_safe=False,
+    packages=setuptools.find_packages(),
+    python_requires=">=3.6",
+    license="MIT",
+    install_requires=[
+        "rich",
+    ],
 )
