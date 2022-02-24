@@ -7,11 +7,11 @@ setup(
     version=clog.__version__,
     description="pretty-print with color",
     long_description=open(os.path.join("README.md")).read(),
-    keywords="debugging, log, color, pretty-print",
+    keywords="debugging, log, color, pretty-print, rich",
     author="Brad Montgomery",
     author_email="brad@bradmontgomery.net",
     url="https://github.com/bradmontgomery/clog",
-    packages=find_packages(exclude=["tests"]),
+    packages=find_packages(),
     python_requires=">=3.6",
     install_requires=[
         "rich",
