@@ -1,9 +1,9 @@
 clog
 ====
 
-**Pretty-print things with color.**
+This project is now simply a shortcut for using [rich](https://github.com/Textualize/rich).
 
-This utility allows you to wrap `pprint` with colors.
+_If you want to save yourself a dependency, just use `rich`._
 
 
 ## Usage
@@ -23,15 +23,22 @@ Or change the color:
     >>> clog(data, title="My Data", color="red")
 
 
-## Colors
+### Colors
 
-This library uses the ANSI color codes from [fabric](http://www.fabfile.org/),
-and it supports the following color strings:
+This library uses `rich` under the hood, so it theoretically supports
+any color that `rich` supports.
 
-- blue
-- cyan
-- green
-- magenta
-- red
-- white
-- yellow
+
+## Disclaimer
+
+The `clog` function is now simply a wrapper around:
+
+```python
+from rich.panel import Panel
+from rich.pretty import Pretty
+from rich import print
+
+print(Panel(Pretty(msg), title=title, subtitle=None, border_style=color))
+```
+
+So, seriously... just use `rich`.
