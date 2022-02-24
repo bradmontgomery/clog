@@ -1,21 +1,20 @@
-import os
-from setuptools import setup, find_packages
-import clog
+import setuptools
 
-setup(
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
     name="clog",
-    version=clog.__version__,
-    description="pretty-print with color",
-    long_description=open(os.path.join("README.md")).read(),
-    keywords="debugging, log, color, pretty-print, rich",
+    version="0.3.0",
     author="Brad Montgomery",
     author_email="brad@bradmontgomery.net",
+    description="pretty-print with color",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/bradmontgomery/clog",
-    packages=find_packages(),
-    python_requires=">=3.6",
-    install_requires=[
-        "rich",
-    ],
+    project_urls={
+        "Bug Tracker": "https://github.com/bradmontgomery/clog/issues",
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python",
@@ -25,7 +24,10 @@ setup(
         "Programming Language :: Python :: 3",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    packages=setuptools.find_packages(),
+    python_requires=">=3.6",
     license="MIT",
-    include_package_data=True,
-    zip_safe=False,
+    install_requires=[
+        "rich",
+    ],
 )
