@@ -38,7 +38,7 @@ from rich.panel import Panel
 from rich.pretty import Pretty
 from rich import print
 
-print(Panel(Pretty(msg), title=title, subtitle=None, border_style=color))
+print(Panel(Pretty(msg), title=title, subtitle=subtitle, border_style=color))
 ```
 
 So, seriously... just use `rich`.

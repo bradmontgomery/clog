@@ -4,4 +4,4 @@ from rich import print
 
 
 def clog(msg, color="yellow", title=None, subtitle=None):
-    print(Panel(Pretty(msg), title=title, subtitle=None, border_style=color))
+    print(Panel(Pretty(msg), title=title, subtitle=subtitle, border_style=color))
